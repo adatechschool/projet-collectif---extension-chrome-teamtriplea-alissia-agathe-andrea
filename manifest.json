@@ -4,13 +4,13 @@
   "description": "Extension permettant de changer les mots indésirables et les images rebutantes",
   "version": "1.0.0",
   "action": {
-    "default_popup": "BoutonSOS.html",
+    "default_popup": "fonctionnalite_image/BoutonSOS.html",
     "default_icon": "IconeRemplacement.png" 
   },
   "content_sccripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["fonctionnalite_texte/fonctionnalite_texte/textReplacement.js", "FindImage.js","FindImage.js"]
+      "js": ["fonctionnalite_texte/textReplacement.js","fonctionnalite_images_FindImage.js"]
     }
   ]
 }
