@@ -16,8 +16,12 @@ function imageChange(){
 function buttonImage(){
     let images = findImg()
     for (let i = 0; i < images.length; i++){
-        
+        //let button = document.createElement('input')
+        let baliseImg = getElementByTagName('img')
+        baliseImg.insertAdjacentHTML('afterend', '<input type="button" id="button"')
     }
 }
 
 buttonImage()
+
+
