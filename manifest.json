@@ -1,16 +1,19 @@
 {
   "manifest_version": 3,
   "name": "Hello Extensions",
-  "description": "Base Level Extension",
-  "version": "1.0",
+  "description": "Extension permettant de changer les mots indésirables et les images rebutantes",
+  "version": "1.0.0",
   "action": {
-    "default_popup": "sayHello.html",
-    "default_icon": "hello_extensions.png"
+    "default_popup": "BoutonSOS.html",
+    "default_icon": "IconeRemplacement.png" 
   },
   "content_sripts": [
     {
       "matches": ["<all_urls>"],
       "js": ["textReplacement.js"]
     }
-  ]
+  ],
+    "background": {
+      "service_worker": "FindImage.js"
+    }
 }

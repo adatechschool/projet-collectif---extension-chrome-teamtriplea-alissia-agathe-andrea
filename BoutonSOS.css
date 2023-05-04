@@ -1,0 +1,19 @@
+#sos{
+    width: 100px;
+    height : auto;
+}
+
+div{
+    display: flex;
+    justify-content: center;
+    
+}
+
+body{
+    width : 600px;
+}
+
+h3{
+    text-align: center;
+}
+
