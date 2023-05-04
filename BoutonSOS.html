@@ -6,23 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bouton SOS</title>
     <link rel="stylesheet" href="BoutonSOS.css">
+    <script src="FindImage.js" ></script>
 
 </head>
 <body>
     <div id="boutonPlacement">
         <input id="sos" type="image" src="sos.png"> 
-    <button onclick ="fsupp()" >Supprimer toutes les images</button>
         <!--<img class="boutonSOS" src="sos.png" alt="emergency Button"> -->
     </div>
     <h3>En cas de panique, Cliquez sur ce bouton.</h3>
-<script>
-    function fsupp(){
- var images = document.querySelectorAll('img'); 
- 	for (var i in  images) 
- 	{
- 		images[i].remove(); 
- 	}
- } 
-</script>
+
 </body>
 </html>

@@ -7,13 +7,10 @@
     "default_popup": "BoutonSOS.html",
     "default_icon": "IconeRemplacement.png" 
   },
-  "content_sripts": [
+  "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["textReplacement.js"]
+      "js": ["fonctionnalite_texte/textReplacement.js","FindImage.js"]
     }
-  ],
-    "background": {
-      "service_worker": "FindImage.js"
-    }
+  ]
 }
