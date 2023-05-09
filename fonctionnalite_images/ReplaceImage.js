@@ -23,4 +23,13 @@ async function imageApi(){
   }
 }
 
-imageApi()
+var keys = {};
+
+onkeydown = onkeyup = function (e) {
+    e = e || event;
+    e.which = e.which || e.keyCode;
+    keys[e.which] = e.type === 'keydown';
+  if (keys[17] && keys[18] && keys[69]) {
+        console.log('Ctrl + Alt + E');
+    }
+}
