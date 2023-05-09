@@ -45,3 +45,23 @@ imageChange()
 
 //buttonImage()
 
+async function imageApi(){
+
+  let theme = prompt("Quel thème voulez-vous ?")
+  const API_KEY =  '36017207-2ec42e2823cd61998591ebd85';
+  let URL = "https://pixabay.com/api/?key=" + API_KEY + "&q=" + encodeURIComponent (theme);
+  const url = await fetch(URL);
+  const json = await url.json();
+  let array = json.hits
+
+  let formation = [];
+
+  for (const image of array){
+    formation.push(image.webformatURL)
+  }
+
+  const randomImage = Math.floor(Math.random()*formation.length);
+  document.getElementsByTagName("img").src = formation[randomImage]
+}
+
+imageApi()
