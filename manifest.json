@@ -3,14 +3,15 @@
   "name": "Hello Extensions",
   "description": "Extension permettant de changer les mots indésirables et les images rebutantes",
   "version": "1.0.0",
+  "host_permissions": ["<all_urls>"],
   "action": {
     "default_popup": "BoutonSOS.html",
     "default_icon": "IconeRemplacement.png" 
   },
-  "content_sccripts": [
+  "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["fonctionnalite_texte/fonctionnalite_texte/textReplacement.js", "FindImage.js","FindImage.js"]
+      "js": ["fonctionnalite_texte/textReplacement.js", "FindImage.js"]
     }
   ]
 }

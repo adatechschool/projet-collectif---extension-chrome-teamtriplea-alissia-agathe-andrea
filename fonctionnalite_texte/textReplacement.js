@@ -1,6 +1,5 @@
 function textReplacement() {
-    let forbiddenWord = document.body.textContent.includes("araignée")
-    forbiddenWord = "alouette"
+    document.body.innerHTML = document.body.innerHTML.replace(/araignée/g, "alouette")
 }
 
 textReplacement()
