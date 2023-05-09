@@ -10,7 +10,8 @@
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["fonctionnalite_texte/textReplacement.js","fonctionnalite_images/FindImage.js"]
+      "js": ["fonctionnalite_texte/textReplacement.js","fonctionnalite_images/ReplaceImage.js"],
+      "web_accessible_resources": ["sos.png","IconeRemplacement.png","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5qRC4YCAgWeXtRA7vu6KMtkKCsVA8h1FUW81szGZR0A&s"]
     }
-  ]
+  ]  
 }
