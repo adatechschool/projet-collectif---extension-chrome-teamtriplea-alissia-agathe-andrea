@@ -13,17 +13,14 @@ async function imageApi(){
   let formation = [];
 
   for (const image of array){
-    console.log(formation.push(image.webformatURL))
+    formation.push(image.webformatURL)
   }
 
   let images = document.getElementsByTagName('img')
-  let randomIndex = Math.floor(Math.random() * formation.length);
   for (let i = 0; i < images.length; i++){
+  let randomIndex = Math.floor(Math.random() * formation.length);
   images[i].src = formation[randomIndex]
   }
-
-  //const randomImage = Math.floor(Math.random()*formation.length);
-  //document.getElementsByTagName("img").src = formation[randomImage]
 }
 
 imageApi()
