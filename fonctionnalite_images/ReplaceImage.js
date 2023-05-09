@@ -1,26 +1,16 @@
-function findImg(){
-//let allImages = document.querySelectorAll("img");
-let allImages = document.getElementsByTagName('img')
-//console.log(allImages)
-    return allImages
-}
-
-//findImg()
-
-
 
 function imageChange(){
   console.log('images changing');
-  let filenames = ['images/IconeRemplacement.png','images/sos.png'];
-  //let filenames = ['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5qRC4YCAgWeXtRA7vu6KMtkKCsVA8h1FUW81szGZR0A&s']
+  //let filenames = ['images/IconeRemplacement.png','images/sos.png'];
+  let filenames = [
+    'https://www.referenseo.com/wp-content/uploads/2019/03/image-attractive-960x540.jpg',
+    'https://cdn.futura-sciences.com/sources/images/dossier/773/01-intro-773.jpg'
+  ]
   let images = document.getElementsByTagName('img')
-  let test = Math.floor(Math.random() * filenames.length);
   for (let i = 0; i < images.length; i++){
-    images[i].src = filenames[test];
-    test++;
-    if (test > 8){
-      random = 0;
-    }
+  let random = Math.floor(Math.random() * filenames.length);
+  let file = filenames[random]
+  images[i].src = file  
   }
   //for(imgElt of images){
     //console.log(imgElt.src)
