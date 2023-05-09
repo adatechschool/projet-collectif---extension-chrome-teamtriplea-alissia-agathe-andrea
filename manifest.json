@@ -13,9 +13,5 @@
       "matches": ["<all_urls>"],
       "js": ["fonctionnalite_texte/textReplacement.js","fonctionnalite_images/ReplaceImage.js"]
     }
-  ], 
-  "web_accessible_resources": [{
-    "resources": ["images/*png"],
-    "matches" : ["<all_urls>"]
-  }]
+  ]
 }
