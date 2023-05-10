@@ -23,13 +23,35 @@ async function imageApi(){
   }
 }
 
+// Permet de changer l'image en cliquant sur Shift + R
 var keys = {};
+function trackMultipleKeyStroke (e) {
+  e = e || event;
+  e.which = e.which || e.keyCode;
 
-onkeydown = onkeyup = function (e) {
-    e = e || event;
-    e.which = e.which || e.keyCode;
-    keys[e.which] = e.type === 'keydown';
-  if (keys[17] && keys[18] && keys[69]) {
-        console.log('Ctrl + Alt + E');
-    }
+  keys[e.which] = e.type === 'keydown';
+
+  if (keys[82] && keys[97]) {
+    keys[82] = false 
+    keys[97] = false
+    console.log(keys)
+    console.log('You pressed 1 + R, images changed');
+    imageApi()
+  }
 }
+
+function addEvent(element, event, func) {
+  if (element.attachEvent) {
+      return element.attachEvent('on' + event, func);
+  } else {
+      return element.addEventListener(event, func, false);
+  }
+}
+
+addEvent(window, "keydown", trackMultipleKeyStroke);
+addEvent(window, "keyup", trackMultipleKeyStroke);
+
+
+// stocker la source de l'image de base pour pouvoir la remettre
+
+
