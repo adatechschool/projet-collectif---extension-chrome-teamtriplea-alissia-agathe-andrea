@@ -13,5 +13,9 @@
       "matches": ["<all_urls>"],
       "js": ["fonctionnalite_texte/textReplacement.js","fonctionnalite_images/ReplaceImage.js"]
     }
-  ]
+  ],
+  "permissions": ["scripting","tabs","storage"],
+  "background": {
+  "service_worker": "fonctionnalite_images/background.js"
+}
 }

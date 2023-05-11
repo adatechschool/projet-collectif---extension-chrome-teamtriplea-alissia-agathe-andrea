@@ -1,6 +1,12 @@
-#sos{
+#btn{
     width: 100px;
-    height : auto;
+    height : 70px;
+    border-radius: 30px;
+    text-align: center;
+    background-color: red;
+    color: white;
+    font-size: large;
+
 }
 
 div{

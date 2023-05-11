@@ -1,5 +1,6 @@
 
 
+
 // Appel de l'API qui génére une image aléatoire d'un insecte préalablement demandé à l'utilisateur + changement de l'image
 async function imageApi(){
 
@@ -15,8 +16,10 @@ async function imageApi(){
   for (const image of array){
     formation.push(image.webformatURL)
   }
+  console.log(formation)
 
   let images = document.getElementsByTagName('img')
+  console.log(images)
   for (let i = 0; i < images.length; i++){
   let randomIndex = Math.floor(Math.random() * formation.length);
   images[i].src = formation[randomIndex]
@@ -52,6 +55,11 @@ addEvent(window, "keydown", trackMultipleKeyStroke);
 addEvent(window, "keyup", trackMultipleKeyStroke);
 
 
-// stocker la source de l'image de base pour pouvoir la remettre
+// lance imageApi lorsque l'on clique sur le bouton de la popUp
+
+// var bouton = document.getElementById("btn")
+// if(bouton){
+// bouton.addEventListener("click", function(){imageApi()});
+//}
 
 
