@@ -1,6 +1,7 @@
 chrome.storage.onChanged.addListener(() => {
   chrome.storage.local.get(["button"]).then ((result) => {
       console.log(result.button)
+      console.log("coucou")
       if (result.button == true){
           console.log("Button click ok")
           imageApi();
