@@ -16,6 +16,6 @@
   ],
   "permissions": ["scripting","tabs","storage"],
   "background": {
-  "service_worker": "fonctionnalite_images/background.js"
+  "service_worker": "background.js"
 }
 }
