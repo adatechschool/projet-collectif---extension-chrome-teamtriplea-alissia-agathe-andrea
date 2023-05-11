@@ -13,11 +13,11 @@ document.addEventListener('DOMContentLoaded', function (){
             console.log("le button est" + result.button);
         
             if (result.button == false){ 
-                console.log("toggle if =" + result.button);
+                console.log("button if =" + result.button);
                 chrome.storage.local.set({button: true})
                 
             } else {
-                console.log("toggle else = " + result.button);
+                console.log("button else = " + result.button);
                 chrome.storage.local.set({button: false})
                 
 
