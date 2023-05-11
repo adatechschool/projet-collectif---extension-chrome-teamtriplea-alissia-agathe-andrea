@@ -1,0 +1,25 @@
+#btn{
+    width: 100px;
+    height : 70px;
+    border-radius: 30px;
+    text-align: center;
+    background-color: red;
+    color: white;
+    font-size: large;
+
+}
+
+div{
+    display: flex;
+    justify-content: center;
+    
+}
+
+body{
+    width : 600px;
+}
+
+h3{
+    text-align: center;
+}
+

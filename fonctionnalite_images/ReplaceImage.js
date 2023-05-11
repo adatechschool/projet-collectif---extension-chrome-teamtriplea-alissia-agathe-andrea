@@ -1,4 +1,13 @@
-
+chrome.storage.onChanged.addListener(() => {
+  chrome.storage.local.get(["button"]).then ((result) => {
+      console.log(result.button)
+      if (result.button == true){
+          console.log("Button click ok")
+          imageApi();
+      } else {
+          console.log("Button unclick");
+      }
+  })})
 
 
 // Appel de l'API qui génére une image aléatoire d'un insecte préalablement demandé à l'utilisateur + changement de l'image
@@ -26,7 +35,7 @@ async function imageApi(){
   }
 }
 
-// Permet de changer l'image en cliquant sur Shift + R
+// Permet de changer l'image en cliquant sur 1 + R
 var keys = {};
 function trackMultipleKeyStroke (e) {
   e = e || event;
@@ -53,13 +62,4 @@ function addEvent(element, event, func) {
 
 addEvent(window, "keydown", trackMultipleKeyStroke);
 addEvent(window, "keyup", trackMultipleKeyStroke);
-
-
-// lance imageApi lorsque l'on clique sur le bouton de la popUp
-
-// var bouton = document.getElementById("btn")
-// if(bouton){
-// bouton.addEventListener("click", function(){imageApi()});
-//}
-
 
